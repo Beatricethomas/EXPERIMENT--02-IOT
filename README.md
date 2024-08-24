@@ -1,12 +1,11 @@
-###  DATE: 
-
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
-
-
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
- 
+
+###  DATE: 24-08-2024
+
+###  NAME: BEATRICE THOMAS
+###  ROLL NO : 212223110005
+###  DEPARTMENT: CSE IOT
+
 
 ## Aim: To Interface a Digital Input  (IR pair ) to ARM IOT development board and write a  program to obtain  the data 
 ## Components required: STM32 CUBE IDE, ARM IOT development board,  STM programmer tool.
@@ -77,10 +76,37 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
+```
+//Header file
+#include "main.h"
+#include"stdbool.h"
+bool IRstatus;
+
+//While loop
+
+ while ()
+  {
+      if(IRstatus==1)
+      {
+    	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0,GPIO_PIN_RESET);
+    	 HAL_Delay(1000);
+
+    	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+    	 HAL_Delay(1000);
+      }
+      else
+      {
+    	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+    	 HAL_Delay(1000);
+      }
+  }
+```
 
 
 
 ## Output  :
+![Screenshot 2024-08-24 112415](https://github.com/user-attachments/assets/b086ff3a-7aec-40dc-98c1-f2a2ba48cd88)
+
  
  
  
